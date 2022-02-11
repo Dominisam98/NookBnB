@@ -9,58 +9,33 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
-import Weather from './components/weather';
+import Weather from './components/weather/weather';
+import * as sessionActions from "./store/session";
 import './App.css'
+import MainPage from './components/welcomePage/welcome';
 function App() {
-  const [loaded, setLoaded] = useState(false);
   const dispatch = useDispatch();
-  const [latitude, setLatitude] = useState(0);
-  const [longitude, setLongitude] = useState(0);
-  const [weather, setWeather] = useState("");
-  const [temperature, setTemperature] = useState(0);
-  const [cityName, setCityName] = useState("");
-
-  const savePositionToState = (position) => {
-    setLatitude(position.coords.latitude);
-    setLongitude(position.coords.longitude);
-  };
-
-  const fetchWeather = async () => {
-    try {
-      await window.navigator.geolocation.getCurrentPosition(
-        savePositionToState
-      );
-      const res = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=11781b3ce828d0c58e485a2452b682be`
-      );
-      setTemperature(res.data.main.temp);
-      setCityName(res.data.name);
-      setWeather(res.data.weather[0].main);
-      console.log(res.data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  useEffect(() => {
-    fetchWeather();
-  }, [latitude, longitude]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     (async() => {
       await dispatch(authenticate());
-      setLoaded(true);
+      setIsLoaded(true);
     })();
   }, [dispatch]);
 
-  if (!loaded) {
+  if (!isLoaded) {
     return null;
   }
 
   return (
 <BrowserRouter>
-      <NavBar />
+   <NavBar isLoaded={isLoaded}/>
+   {isLoaded && (
       <Switch>
+        <Route path='/welcome' exact={true}>
+              <MainPage isLoaded={isLoaded}/>
+        </Route>
         <Route path='/login' exact={true}>
           <LoginForm />
           <Weather />
@@ -75,9 +50,9 @@ function App() {
           <User />
         </ProtectedRoute>
         <ProtectedRoute path='/' exact={true} >
-          <h1>My Home Page</h1>
         </ProtectedRoute>
       </Switch>
+       )}
     </BrowserRouter>
   );
 }

@@ -1,50 +1,51 @@
 
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import LogoutButton from './auth/LogoutButton';
+import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-const NavBar = ({ loaded }) => {
+import LogoutButton from './auth/LogoutButton';
+import './Navbar.css'
+const NavBar = ({ isLoaded }) => {
   const user = useSelector(state => state.session.user)
   let sessionLinks;
   if (user) {
     sessionLinks = (
-      <nav>
-        <ul>
-          <li>
+
+          <>
+
             <NavLink to='/' exact={true} activeClassName='active'>
-              Home
+               Home
             </NavLink>
-          </li>
-          <li>
-            <NavLink to='/users' exact={true} activeClassName='active'>
+            <Link to='/users' exact={true}>
               Users
-            </NavLink>
-          </li>
-          <li>
+            </Link>
             <LogoutButton />
-          </li>
-        </ul>
-      </nav>
+
+          </>
+
     );
   } else {
     sessionLinks = (
       <>
-        <li>
-          <NavLink to='/login' exact={true} activeClassName='active'>
-            Login
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to='/sign-up' exact={true} activeClassName='active'>
-            Sign Up
-          </NavLink>
-        </li>
-      </>);
+          <nav>
+            <ul>
+             <li><NavLink to='/' exact={true} className='openpage'>Home</NavLink></li>
+              <li><NavLink to='/login' className='openpage' exact={true}>Login</NavLink></li>
+              <li><NavLink to='/sign-up' className='openpage' exact={true}>Sign Up</NavLink></li>
+            </ul>
+
+          </nav>
+      </>
+      );
 }
 return(
   <>
-    {loaded && sessionLinks}
-  </>
+
+  <ul>
+
+      {isLoaded && sessionLinks}
+
+  </ul>
+</>
 )
 }
 
