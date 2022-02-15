@@ -4,7 +4,7 @@ from app.models import db, Image
 # Adds a demo user, you can add other users here if you want
 def seed_images():
     demoImage = Image(
-        url="http://www.sosostris.com/wp-content/uploads/2012/11/HNI_00214.jpg",
+        url="https://i.ibb.co/KVbtTpv/download-6.jpg",
         homeId=1
         )
     demoImageTwo = Image(
