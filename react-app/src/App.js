@@ -14,6 +14,8 @@ import './App.css'
 import CreateHomeForm from './components/CreateHomeForm/NewHome';
 import MainPage from './components/welcomePage/welcome';
 import ViewHomes from './components/ViewAllHomes/viewhomes';
+import EditHomeForm from './components/EditHomeForm/edithomeform';
+import SingleHome from './components/ASingleHome/singleHome';
 
 
 
@@ -58,8 +60,14 @@ function App() {
           <Route path="/homes/new" exact={true}>
             <CreateHomeForm />
           </Route>
-          <Route path="/homes/" exact={true}>
+          <ProtectedRoute path="/homes/" exact={true}>
           <ViewHomes />
+        </ProtectedRoute>
+        <Route path="/homes/:id/edit" exact={true}>
+          <EditHomeForm />
+        </Route>
+        <Route path="/homes/:id" exact={true}>
+          <SingleHome />
         </Route>
           <ProtectedRoute path='/users' exact={true} >
             <UsersList />

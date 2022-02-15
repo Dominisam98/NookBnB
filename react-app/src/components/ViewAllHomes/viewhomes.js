@@ -15,7 +15,7 @@ function ViewHomes() {
   const [isShown, setIsShown] = useState('');
   const [ latt, setLatt] = useState(41)
   const [ long, setLong ] = useState(-89)
-  const [key, setKey] = useState();
+  
 
   let checker;
 

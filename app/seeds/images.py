@@ -4,63 +4,63 @@ from app.models import db, Image
 # Adds a demo user, you can add other users here if you want
 def seed_images():
     demoImage = Image(
-        url="https://images.unsplash.com/photo-1481018085669-2bc6e4f00eed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGF1bnRlZCUyMGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="http://www.sosostris.com/wp-content/uploads/2012/11/HNI_00214.jpg",
         homeId=1
         )
     demoImageTwo = Image(
-        url="https://images.unsplash.com/photo-1617228133035-2347f159e755?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aW50ZXJpb3IlMjBob21lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/cc9sVc6/download-1.jpg",
         homeId=1
         )
     demoImageThree = Image(
-        url="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW50ZXJpb3IlMjBob21lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/mhdbwBm/Poppy-s-place-Had-so-much-fun-decorating-my-favorite-lil-squirrel-s-yard.jpg",
         homeId=1
         )
     demoImageFour = Image(
-        url="https://images.unsplash.com/photo-1602769921397-e870d926e1e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGF1bnRlZCUyMGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/zfG5QNd/download-3.jpg",
         homeId=2
         )
     demoImageFive = Image(
-        url="https://images.unsplash.com/photo-1616627451515-cbc80e5ece35?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aW50ZXJpb3IlMjBob21lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/m9ZBFwN/download-2.jpg",
         homeId=2
         )
     demoImageSix = Image(
-        url="https://images.unsplash.com/photo-1618219944342-824e40a13285?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aW50ZXJpb3IlMjBob21lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/FVZdGBW/Lynn.jpg",
         homeId=2
         )
     demoImageSeven = Image(
-        url="https://images.unsplash.com/photo-1621620844577-e43740553901?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8aGF1bnRlZCUyMGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/b1GCJRH/image.jpg",
         homeId=3
         )
     demoImageEight = Image(
-        url="https://images.unsplash.com/photo-1585264550248-1778be3b6368?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aW50ZXJpb3IlMjBob21lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/0mKp5dG/download-5.jpg",
         homeId=3
         )
     demoImageNine = Image(
-        url="https://images.unsplash.com/photo-1617978241112-898785df45b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8aW50ZXJpb3IlMjBob21lfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/cc9sVc6/download-1.jpg",
         homeId=3
         )
     demoImageTen = Image(
-        url="https://images.unsplash.com/photo-1542071519-65d063713e4e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGhhdW50ZWQlMjBob3VzZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/b1GCJRH/image.jpg",
         homeId=4
         )
     demoImageEleven = Image(
-        url="https://images.unsplash.com/photo-1615471618985-97108e2ba478?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGludGVyaW9yJTIwaG9tZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/KVbtTpv/download-6.jpg",
         homeId=4
         )
     demoImageTwelve = Image(
-        url="https://images.unsplash.com/photo-1615875474908-f403116f5287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGludGVyaW9yJTIwaG9tZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/KVbtTpv/download-6.jpg",
         homeId=4
         )
     demoImageThirteen = Image(
-        url="https://images.unsplash.com/photo-1564231959024-540bbf694d49?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8aGF1bnRlZCUyMGhvdXNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/7459Y48/download-4.jpg",
         homeId=5
         )
     demoImageFourteen = Image(
-        url="https://images.unsplash.com/photo-1586105251261-72a756497a11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGludGVyaW9yJTIwaG9tZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/cc9sVc6/download-1.jpg",
         homeId=5
         )
     demoImageFifteen = Image(
-        url="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGludGVyaW9yJTIwaG9tZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+        url="https://i.ibb.co/0mKp5dG/download-5.jpg",
         homeId=5
         )
 
