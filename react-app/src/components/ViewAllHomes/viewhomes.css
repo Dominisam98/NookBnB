@@ -1,0 +1,224 @@
+html {
+    overflow-y: overlay;
+  }
+
+  * {
+      font-family: 'Raleway', sans-serif;
+  }
+body{
+background-image: none;
+}
+  .background-container{
+      height:fit-content;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+
+
+  .feed-main-container{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top:50px;
+      margin-left: .5rem;
+      margin-right: .5rem;
+      margin-bottom: 25px;
+      height: 50%;
+  }
+
+  .spot-feed-container{
+      width: 90%;
+      height: 250px;
+      margin-top: 50px;
+      display: flex;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px -2px rgb(0, 0, 0);
+      transition: transform .5s;
+      background: white;
+
+  }
+
+  .spot-feed-container:hover{
+      transform: scale(1.05);
+  }
+
+  .feed-image{
+      min-width: 50%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+  }
+
+  .feed-image:hover {
+      cursor: pointer;
+  }
+
+  .spot-name{
+      font-size: 1.5rem;
+  }
+
+  .feed-buttons{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #FF385C;
+      width: 100%;
+  }
+
+  .review-color{
+      color: #FF385C;
+  }
+
+  .button-guy{
+      margin-top: 30px;
+      color: black;
+      width: 150px;
+      height: 50px;
+      border-radius: 25px;
+      background-color: white;
+      border: none;
+      font-size: 20px;
+      font-family: 'Raleway', sans-serif;
+      margin-top: 15px;
+      box-shadow: 0 5px 5px -2px rgb(0, 0, 0);
+      transition: transform .5s;
+  }
+
+  .button-guy:hover{
+      transform: scale(1.05);
+  }
+
+  .button-guy:hover{
+      cursor: pointer;
+  }
+
+  .button-guy:focus{
+      color:#FF385C;
+  }
+
+  .buttons-header{
+      margin-top: 50px;
+  }
+
+  .buttons-container{
+      width: 70vw;
+      justify-content: space-evenly;
+      display: flex;
+  }
+
+  .host-and-price{
+      display: flex;
+      list-style-type: none;
+      justify-content: space-between;
+  }
+
+  .spot-details{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+      box-sizing: border-box;
+  }
+
+  .show-images-false{
+      height: 50%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      visibility: hidden;
+  }
+
+  .show-images-true{
+      height: 50%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      visibility: visible;
+      -webkit-animation: fadein 2s;
+         -moz-animation: fadein 2s;
+          -ms-animation: fadein 2s;
+           -o-animation: fadein 2s;
+              animation: fadein 2s;
+  }
+
+  .smaller-image1{
+      width: 40%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 5px 8px 15px -2px rgb(0, 0, 0);
+  }
+
+  .smaller-image2{
+      width: 40%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 5px 8px 15px -2px rgb(0, 0, 0);
+  }
+
+  @media screen and (max-width: 600px){
+      .background-container{
+          width: 100vw;
+      }
+
+      .feed-main-container{
+          width: 100vw;
+      }
+
+      .feed-buttons{
+          margin-top: 4rem;
+      }
+
+      .buttons-container{
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .spot-feed-container{
+          width: 95%
+      }
+
+      .host-and-price{
+          flex-direction: column;
+      }
+  }
+
+  .map-and-feed{
+      display: flex;
+      width: 90vw;
+  }
+
+  .map-div{
+      position:fixed;
+      right: 50px;
+      top: 15rem;
+  }
+
+  .feed-div{
+      margin-right: 20rem;
+      height: 75vh;
+      overflow: scroll;
+      overflow-x: hidden;
+      padding-left: 25px;
+      width: 50%;
+      padding-bottom: 5%;
+      box-sizing: border-box;
+  }
+
+  .feed-div::-webkit-scrollbar {
+      display: none;
+  }
