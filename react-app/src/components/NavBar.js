@@ -13,15 +13,15 @@ const NavBar = ({ isLoaded }) => {
     sessionLinks = (
 
           <>
-
-            <NavLink to='/' exact={true} activeClassName='active'>
-               Home
-            </NavLink>
-            <Link to='/homes' exact={true}>
-               Find A Home
-            </Link>
-            <LogoutButton />
-            <ProfileButton />
+            <nav>
+              <ul>
+                <li><NavLink to='/' exact={true} activeClassName='active' className='openpage'> Home </NavLink></li>
+                <li><NavLink to='/homes' exact={true} className='openpage'> Find A Home </NavLink></li>
+                <li><NavLink to='/homes/new' exact={true} className='openpage'> Add A Listing </NavLink></li>
+                <li><LogoutButton /></li>
+              </ul>
+            {/* <ProfileButton /> */}
+            </nav>
           </>
 
     );
