@@ -3,12 +3,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import Weather from '../weather/weather';
 import './welcome.css'
-import BackgroundSlideshow from 'react-background-slideshow'
 
 
-import image1 from './home1.jpg'
-import image2 from './home2.jpg'
-import image3 from './home3.jpg'
 function MainPage({ isLoaded }) {
     const sessionUser = useSelector(state => state.session.user);
     const dispatch = useDispatch();
@@ -17,6 +13,7 @@ function MainPage({ isLoaded }) {
     if (sessionUser) {
         sessionLinks = (
             <>
+                <h1>Welcome</h1>
 
             </>
         );

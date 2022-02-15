@@ -1,7 +1,7 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, IntegerField
 from wtforms.validators import DataRequired, Email, ValidationError
-from app.models import Spot
+from app.models import Home
 
 class NewHomeForm(FlaskForm):
     name = StringField(

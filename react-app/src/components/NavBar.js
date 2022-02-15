@@ -15,8 +15,8 @@ const NavBar = ({ isLoaded }) => {
             <NavLink to='/' exact={true} activeClassName='active'>
                Home
             </NavLink>
-            <Link to='/users' exact={true}>
-              Users
+            <Link to='/homes' exact={true}>
+               Find A Home
             </Link>
             <LogoutButton />
 

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import LoginForm from './components/auth/Login/LoginForm';
@@ -12,13 +11,21 @@ import { authenticate } from './store/session';
 import Weather from './components/weather/weather';
 import * as sessionActions from "./store/session";
 import './App.css'
+import CreateHomeForm from './components/CreateHomeForm/NewHome';
 import MainPage from './components/welcomePage/welcome';
+import ViewHomes from './components/ViewAllHomes/viewhomes';
+
+
+
+
+
+
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    (async() => {
+    (async () => {
       await dispatch(authenticate());
       setIsLoaded(true);
     })();
@@ -28,31 +35,42 @@ function App() {
     return null;
   }
 
+
+
+
+
+
   return (
-<BrowserRouter>
-   <NavBar isLoaded={isLoaded}/>
-   {isLoaded && (
-      <Switch>
-        <Route path='/welcome' exact={true}>
-              <MainPage isLoaded={isLoaded}/>
+    <BrowserRouter>
+      <NavBar isLoaded={isLoaded} />
+      {isLoaded && (
+        <Switch>
+          <Route path='/' exact={true}>
+            <MainPage isLoaded={isLoaded} />
+          </Route>
+          <Route path='/login' exact={true}>
+            <LoginForm />
+            <Weather />
+          </Route>
+          <Route path='/sign-up' exact={true}>
+            <SignUpForm />
+          </Route>
+          <Route path="/homes/new" exact={true}>
+            <CreateHomeForm />
+          </Route>
+          <Route path="/homes/" exact={true}>
+          <ViewHomes />
         </Route>
-        <Route path='/login' exact={true}>
-          <LoginForm />
-          <Weather />
-        </Route>
-        <Route path='/sign-up' exact={true}>
-          <SignUpForm />
-        </Route>
-        <ProtectedRoute path='/users' exact={true} >
-          <UsersList/>
-        </ProtectedRoute>
-        <ProtectedRoute path='/users/:userId' exact={true} >
-          <User />
-        </ProtectedRoute>
-        <ProtectedRoute path='/' exact={true} >
-        </ProtectedRoute>
-      </Switch>
-       )}
+          <ProtectedRoute path='/users' exact={true} >
+            <UsersList />
+          </ProtectedRoute>
+          <ProtectedRoute path='/users/:userId' exact={true} >
+            <User />
+          </ProtectedRoute>
+          <ProtectedRoute path='/' exact={true} >
+          </ProtectedRoute>
+        </Switch>
+      )}
     </BrowserRouter>
   );
 }
