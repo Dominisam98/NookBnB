@@ -54,7 +54,6 @@
 
 .main-image-container{
     display: flex;
-    /* border: 1px solid blue; */
     width: 60%;
     height: auto;
     padding-right: 5px;
@@ -119,7 +118,6 @@
 
 .review-container{
     height: 200px;
-    /* border: 1px solid black; */
     border-radius: 10px;
     width: 400px;
     flex-wrap: wrap;
