@@ -18,8 +18,7 @@ function SingleHome() {
   const [editSelected, setEditSelected] = useState([false, null])
   const userId = user?.id;
 
-  // const reviews = home?.reviews
-  // console.log(reviews)
+  
   if(!homes){
     history.push('/homes')
   }
