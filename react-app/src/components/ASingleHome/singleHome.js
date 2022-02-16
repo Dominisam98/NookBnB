@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useHistory } from "react-router-dom";
 import { useParams } from "react-router";
-// import NavBar from "../navBar/NavBar.js";
 import EditHomeModal from "../EditHomeModal"
 import * as homeStore from "../../store/home";
 import "./singlehome.css";
@@ -19,8 +18,8 @@ function SingleHome() {
   const [editSelected, setEditSelected] = useState([false, null])
   const userId = user?.id;
 
-  // const reviews = spot?.reviews
-  // console.log(reviews)
+  const reviews = home?.reviews
+  console.log(reviews)
   if(!homes){
     history.push('/homes')
   }
@@ -29,14 +28,14 @@ function SingleHome() {
   let homeReviews;
   if(homes){
     home = homes.filter((home) =>home["id"] == id)[0];
-    // spotReviews = spot?.reviews
+    homeReviews = home?.reviews
 
   }
 
-  // if(spot){
-  //   const reviews = spot?.reviews;
-  //   console.log(reviews);
-  // }
+  if(home){
+    const reviews = home?.reviews;
+    console.log(reviews);
+  }
 
   let content;
   if(userId === home?.userId){
@@ -46,7 +45,7 @@ function SingleHome() {
           <EditHomeModal />
         </div>
         <div>
-          <button className="single-spot-button" onClick={() => deleteSpot(id)}>
+          <button className="single-spot-button" onClick={() => deleteHome(id)}>
             <i className="far fa-trash-alt"></i>Delete
           </button>
         </div>
@@ -55,54 +54,54 @@ function SingleHome() {
   }
 
 
-//   let reviewEdit =
-//     <div className="edit-review-container">
-//       <textarea
-//         id="review-edit-input"
-//         type="text"
-//         value={editedReview}
-//         onChange={(e) => setEditedReview(e.target.value)}
-//         placeholder=""
-//       ></textarea>
-//       <span>
-//         <button
-//           id="edit-review-submit"
-//           onClick={() => editReview(editReviewId, editedReview)}
-//         >
-//           Update
-//         </button>
-//       </span>
-//     </div>
+  let reviewEdit =
+    <div className="edit-review-container">
+      <textarea
+        id="review-edit-input"
+        type="text"
+        value={editedReview}
+        onChange={(e) => setEditedReview(e.target.value)}
+        placeholder=""
+      ></textarea>
+      <span>
+        <button
+          id="edit-review-submit"
+          onClick={() => editReview(editReviewId, editedReview)}
+        >
+          Update
+        </button>
+      </span>
+    </div>
 
 
-//   const postReview = async (spotId) => {
-//     if (review.length < 300) {
-//       await dispatch(homeStore.thunk_postReview({ review, userId, spotId }));
-//       await dispatch(homeStore.thunk_getAllHomes());
-//     }
-//     setReview("");
-//   };
+  const postReview = async (homeId) => {
+    if (review.length < 300) {
+      await dispatch(homeStore.thunk_postReview({ review, userId, homeId }));
+      await dispatch(homeStore.thunk_getAllHomes());
+    }
+    setReview("");
+  };
 
-  const deleteSpot = async (id) => {
+  const deleteHome = async (id) => {
     await dispatch(homeStore.thunk_deleteHome({ id }));
     await dispatch(homeStore.thunk_getAllHomes());
     history.push('/homes')
   };
 
-//   const editReview = async (id) => {
-//     let reviewId = editReviewId
-//     let review = editedReview
-//     if(editedReview){
-//     await dispatch(homeStore.thunk_editReview({reviewId, review}))
-//     await dispatch(homeStore.thunk_getAllHomes());
-//     }
-//     setEditSelected([false,null])
-//   }
+  const editReview = async (id) => {
+    let reviewId = editReviewId
+    let review = editedReview
+    if(editedReview){
+    await dispatch(homeStore.thunk_editReview({reviewId, review}))
+    await dispatch(homeStore.thunk_getAllHomes());
+    }
+    setEditSelected([false,null])
+  }
 
-//   const deleteReview = async (reviewId) => {
-//     await dispatch(homeStore.thunk_deleteReview({reviewId}))
-//     await dispatch(homeStore.thunk_getAllHomes());
-//   }
+  const deleteReview = async (reviewId) => {
+    await dispatch(homeStore.thunk_deleteReview({reviewId}))
+    await dispatch(homeStore.thunk_getAllHomes());
+  }
 
 
   useEffect(() => {
@@ -112,9 +111,9 @@ function SingleHome() {
   return (
     <div className="single-post-container">
       <div className="single-spot-name">{home?.name}</div>
-      {/* <div className="review-count">
+      <div className="review-count">
         <span className="review-color">{home?.reviews.length} review(s)</span>
-      </div> */}
+      </div>
       <div className="spot-edit-delete">
         <div>
           {home?.address} {home?.city}, {home?.state}
@@ -159,34 +158,34 @@ function SingleHome() {
                 placeholder="Leave a review"
               ></input>
             </li>
-            {/* <li>
+            <li>
               <button
                 className="submit-review-button"
                 onClick={() => postReview(home.id)}
               >
                 Submit
               </button>
-            </li> */}
+            </li>
           </ul>
           }
         </div>
       )}
       <div className="main-review-container">
-        {/* {spotReviews &&
-          spotReviews?.map((spot, key) => (
+        {homeReviews &&
+          homeReviews?.map((home, key) => (
             <div className="review-container" key={key}>
               <div className="posted-review-container">
-                <p className="posted-by">{spot?.user.username}</p>
-                <div className="review-contents">{editSelected[0] && editSelected[1] == spot.id ? reviewEdit : spot?.review}</div>
+                <p className="posted-by">{home?.user.username}</p>
+                <div className="review-contents">{editSelected[0] && editSelected[1] == home.id ? reviewEdit : home?.review}</div>
               </div>
-              {user?.id == spot?.userId && (
+              {user?.id == home?.userId && (
                 <div className="edit-delete-button-review">
                   <button
                     className="single-spot-button"
                     onClick={() => {
-                      setEditedReview(spot.review)
-                      setEditReviewId(spot.id)
-                      setEditSelected([!editSelected[0], spot.id])
+                      setEditedReview(home.review)
+                      setEditReviewId(home.id)
+                      setEditSelected([!editSelected[0], home.id])
                     }}
                   >
                     Edit
@@ -200,7 +199,7 @@ function SingleHome() {
                 </div>
               )}
             </div>
-          ))} */}
+          ))}
       </div>
     </div>
   );
