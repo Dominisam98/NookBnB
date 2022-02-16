@@ -18,8 +18,8 @@ function SingleHome() {
   const [editSelected, setEditSelected] = useState([false, null])
   const userId = user?.id;
 
-  const reviews = home?.reviews
-  console.log(reviews)
+  // const reviews = home?.reviews
+  // console.log(reviews)
   if(!homes){
     history.push('/homes')
   }
@@ -192,7 +192,7 @@ function SingleHome() {
                   </button>
                   <button
                     className="single-spot-button"
-                    onClick={() => deleteReview(spot.id)}
+                    onClick={() => deleteReview(home.id)}
                   >
                     <i className="far fa-trash-alt"></i>Delete
                   </button>

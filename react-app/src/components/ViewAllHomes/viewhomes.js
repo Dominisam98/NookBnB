@@ -1,28 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import NavBar from "../NavBar.js";
 import * as homeStore from "../../store/home";
 import './viewhomes.css'
 
 function ViewHomes() {
   const history = useHistory();
   const dispatch = useDispatch();
-  const user = useSelector((state) => state.session.user);
   const homeReducer = useSelector((state) => state.homeReducer);
   let homes = homeReducer?.allHomes
   const [homeState, setHomeState] = useState(homes);
   const [isShown, setIsShown] = useState('');
-  const [ latt, setLatt] = useState(41)
-  const [ long, setLong ] = useState(-89)
-  
 
-  let checker;
-
-  const position ={
-    lat: latt,
-    lng: long
-  }
 
 
   if(!homes){
