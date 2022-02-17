@@ -109,7 +109,7 @@ const CreateHomeForm = () => {
     <section className="section-container">
       <div className="form-container">
         <form className="main-form-container" onSubmit={handleSubmit}>
-          <h3 className="new-spot-header">Add a Home</h3>
+          <h3 className="new-home-header">Add a Home</h3>
           <div className="error-list-container">
             <ul className="error-list">
             {errors.map((error, ind) => (
@@ -139,7 +139,7 @@ const CreateHomeForm = () => {
           </div>
           <div className="input-field-new">
             <input
-              className="new-spot-input"
+              className="new-home-input"
               name="city"
               type="input"
               placeholder="City"
@@ -149,7 +149,7 @@ const CreateHomeForm = () => {
           </div>
           <div className="input-field-new">
             <input
-              className="new-spot-input"
+              className="new-home-input"
               name="state"
               type="input"
               placeholder="State"
@@ -160,7 +160,7 @@ const CreateHomeForm = () => {
 
           <div className="input-field-new">
             <input
-              className="new-spot-input"
+              className="new-home-input"
               name="country"
               type="input"
               placeholder="Country"
@@ -191,7 +191,7 @@ const CreateHomeForm = () => {
               <input
                 type="url"
                 placeholder="Main image URL"
-                className="new-spot-input"
+                className="new-home-input"
                 onChange={(e) => {
                   setImage1(e.target.value);
                 }}
@@ -214,7 +214,7 @@ const CreateHomeForm = () => {
               {content3}
               <input
                 type="url"
-                className="new-spot-input"
+                className="new-home-input"
                 placeholder="Additional Image"
                 onChange={(e) => {
                   setImage3(e.target.value);
@@ -224,7 +224,7 @@ const CreateHomeForm = () => {
             </div>
           </div>
           <button className="post-home-form-button" type="submit">
-            Submit Spot
+            Submit Listing
           </button>
         </form>
       </div>

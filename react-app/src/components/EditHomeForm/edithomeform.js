@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { useParams } from "react-router";
-// import "./EditSpotForm.css";
+
 
 import * as homeActions from "../../store/home";
 

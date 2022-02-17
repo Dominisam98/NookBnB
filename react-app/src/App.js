@@ -9,7 +9,6 @@ import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
 import Weather from './components/weather/weather';
-import * as sessionActions from "./store/session";
 import './App.css'
 import CreateHomeForm from './components/CreateHomeForm/NewHome';
 import MainPage from './components/welcomePage/welcome';

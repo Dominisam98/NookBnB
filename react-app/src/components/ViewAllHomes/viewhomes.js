@@ -41,7 +41,7 @@ function ViewHomes() {
             {homeState &&
               homeState.map((home, key) => (
                 <div
-                  className="spot-feed-container"
+                  className="home-feed-container"
                   key={key}
                   onMouseEnter={() => setIsShown(home.id)}
                   onMouseLeave={() => setIsShown("")}
@@ -54,9 +54,9 @@ function ViewHomes() {
                     src={home.images[0]?.url}
                     alt=""
                   />
-                  <div className="spot-details">
+                  <div className="home-details">
                     <div>
-                      <span className="spot-name">{home.name}</span>
+                      <span className="home-name">{home.name}</span>
                       <p>
                         <span className="review-color">
                           {home.reviews.length} review(s)

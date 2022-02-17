@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { useParams } from "react-router";
 import EditHomeModal from "../EditHomeModal"
 import * as homeStore from "../../store/home";
@@ -18,7 +18,7 @@ function SingleHome() {
   const [editSelected, setEditSelected] = useState([false, null])
   const userId = user?.id;
 
-  
+
   if(!homes){
     history.push('/homes')
   }
@@ -44,7 +44,7 @@ function SingleHome() {
           <EditHomeModal />
         </div>
         <div>
-          <button className="single-spot-button" onClick={() => deleteHome(id)}>
+          <button className="single-home-button" onClick={() => deleteHome(id)}>
             <i className="far fa-trash-alt"></i>Delete
           </button>
         </div>
@@ -53,25 +53,13 @@ function SingleHome() {
   }
 
 
-  let reviewEdit =
-    <div className="edit-review-container">
-      <textarea
-        id="review-edit-input"
-        type="text"
-        value={editedReview}
-        onChange={(e) => setEditedReview(e.target.value)}
-        placeholder=""
-      ></textarea>
-      <span>
-        <button
-          id="edit-review-submit"
-          onClick={() => editReview(editReviewId, editedReview)}
-        >
-          Update
-        </button>
-      </span>
-    </div>
 
+
+  const deleteHome = async (id) => {
+    await dispatch(homeStore.thunk_deleteHome({ id }));
+    await dispatch(homeStore.thunk_getAllHomes());
+    history.push('/homes')
+  };
 
   const postReview = async (homeId) => {
     if (review.length < 300) {
@@ -81,11 +69,25 @@ function SingleHome() {
     setReview("");
   };
 
-  const deleteHome = async (id) => {
-    await dispatch(homeStore.thunk_deleteHome({ id }));
-    await dispatch(homeStore.thunk_getAllHomes());
-    history.push('/homes')
-  };
+  let reviewEdit =
+  <div className="edit-review-container">
+    <textarea
+      id="review-edit-input"
+      type="text"
+      value={editedReview}
+      onChange={(e) => setEditedReview(e.target.value)}
+      placeholder=""
+    ></textarea>
+    <span>
+      <button
+        id="edit-review-submit"
+        onClick={() => editReview(editReviewId, editedReview)}
+      >
+        Update
+      </button>
+    </span>
+  </div>
+
 
   const editReview = async (id) => {
     let reviewId = editReviewId
@@ -109,11 +111,11 @@ function SingleHome() {
 
   return (
     <div className="single-post-container">
-      <div className="single-spot-name">{home?.name}</div>
+      <div className="single-home-name">{home?.name}</div>
       <div className="review-count">
         <span className="review-color">{home?.reviews.length} review(s)</span>
       </div>
-      <div className="spot-edit-delete">
+      <div className="home-edit-delete">
         <div>
           {home?.address} {home?.city}, {home?.state}
         </div>
@@ -139,10 +141,10 @@ function SingleHome() {
         </div>
       </div>
       <div className="host-and-price-container">
-        <div className="host-spot-small">
-          Entire house hosted by: {home?.User}
+        <div className="host-home-small">
+          Hosted by: {home?.User}
         </div>
-        <div className="spot-price">Price: ${home?.price}/night</div>
+        <div className="home-price">Price: ${home?.price}/night</div>
       </div>
       {user && (
         <div className="post-reviews">
@@ -180,7 +182,7 @@ function SingleHome() {
               {user?.id == home?.userId && (
                 <div className="edit-delete-button-review">
                   <button
-                    className="single-spot-button"
+                    className="single-home-button"
                     onClick={() => {
                       setEditedReview(home.review)
                       setEditReviewId(home.id)
@@ -190,7 +192,7 @@ function SingleHome() {
                     Edit
                   </button>
                   <button
-                    className="single-spot-button"
+                    className="single-home-button"
                     onClick={() => deleteReview(home.id)}
                   >
                     <i className="far fa-trash-alt"></i>Delete
