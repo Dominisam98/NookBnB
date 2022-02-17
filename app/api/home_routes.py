@@ -5,9 +5,9 @@ import os;
 
 home_routes = Blueprint("homes", __name__)
 
-# GET ALL HOMES WITH IMAGES AND USERS
+#Get all homes
 @home_routes.route("/")
-def view_homes():
+def get_homes():
     homes = (Home.query.join(User, User.id == Home.userId)
     .add_columns(User.username).order_by(desc(Home.created_at)).all()
     )
@@ -23,7 +23,7 @@ def view_homes():
     return jsonify(returnList)
 
 
-# POST NEW HOME
+#Create listing
 @home_routes.route("/new/", methods=["POST"])
 def new_home_post():
     new_home = Home(
@@ -58,7 +58,7 @@ def new_home_post():
 
     return new_home.to_dict()
 
-#Get home by ID
+#Get single home
 @home_routes.route("/<int:id>")
 def one_home(id):
     oneHome = Home.query.get(id).to_dict()
@@ -70,7 +70,7 @@ def one_home(id):
     oneHome["user"] = [one.to_dict() for one in user]
     return oneHome
 
-#Update Post
+#Edit home
 @home_routes.route("/<int:id>/edit", methods=["POST"])
 def updateHome(id):
     homeToUpdate = Home.query.get(id)
@@ -81,7 +81,7 @@ def updateHome(id):
     updatedHome = Home.query.get(id)
     return jsonify(updatedHome.to_dict())
 
-#DELETE /posts/:id/
+#Delete home
 @home_routes.route("/<int:id>", methods=["GET", "DELETE"])
 def deletePost(id):
     homeToDelete = Home.query.get(id)
@@ -89,8 +89,3 @@ def deletePost(id):
     db.session.delete(homeToDelete)
     db.session.commit()
     return jsonify(homeToDelete.to_dict())
-
-@home_routes.route("/api", methods=["GET"])
-def apiKey():
-    key = os.environ.get('REACT_APP_GOOGLE_MAPS_API_KEY')
-    return jsonify(key)
