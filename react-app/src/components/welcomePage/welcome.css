@@ -1,9 +1,13 @@
-body{background-color: #9dffb0
-};
+
 .waviy{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color:  #151719;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
   }
 
   .waviy {

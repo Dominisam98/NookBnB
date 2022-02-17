@@ -53,6 +53,9 @@ function App() {
             <LoginForm />
             <Weather />
           </Route>
+          <ProtectedRoute path='/welcome' exact={true}>
+              <MainPage />
+          </ProtectedRoute>
           <Route path='/sign-up' exact={true}>
             <SignUpForm />
           </Route>
