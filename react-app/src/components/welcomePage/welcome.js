@@ -12,10 +12,17 @@ function MainPage({ isLoaded }) {
     let sessionLinks;
     if (sessionUser) {
         sessionLinks = (
-            <>
-                <h1>Welcome</h1>
+            <div class="waviy">
+                <span>N</span>
+                <span>O</span>
+                <span>O</span>
+                <span>K</span>
+                <span>B</span>
+                <span>N</span>
+                <span>B</span>
+                <span>!</span>
 
-            </>
+             </div>
         );
     } else {
         sessionLinks = (

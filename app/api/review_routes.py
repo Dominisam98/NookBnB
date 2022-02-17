@@ -5,7 +5,7 @@ from app.models import Review
 
 review_routes = Blueprint("reviews", __name__)
 
-
+#Create review
 @review_routes.route("/new/", methods=["POST"])
 def new_review():
     review = Review(
@@ -18,7 +18,7 @@ def new_review():
 
     return jsonify(review.to_dict())
 
-
+#post review
 @review_routes.route("/<int:id>/edit", methods=["GET", "POST"])
 def updated_review(id):
     reviewToUpdate = Review.query.get(id)
@@ -28,7 +28,7 @@ def updated_review(id):
     updated_review = Review.query.get(id)
     return jsonify(updated_review.to_dict())
 
-
+#Delete review
 @review_routes.route("/<int:id>", methods=['DELETE'])
 def delete_review(id):
     review_to_delete = Review.query.get(id)

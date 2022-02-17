@@ -8,7 +8,7 @@ function SignUpFormModal() {
 
   return (
     <>
-      <button className="single-spot-button" onClick={() => setShowModal(true)}>
+      <button className="single-home-button" onClick={() => setShowModal(true)}>
         <i className="far fa-edit"></i>Edit Home
       </button>
       {showModal && (

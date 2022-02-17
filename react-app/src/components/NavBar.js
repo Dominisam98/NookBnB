@@ -18,7 +18,7 @@ const NavBar = ({ isLoaded }) => {
                 <li><NavLink to='/' exact={true} activeClassName='active' className='openpage'> Home </NavLink></li>
                 <li><NavLink to='/homes' exact={true} className='openpage'> Find A Home </NavLink></li>
                 <li><NavLink to='/homes/new' exact={true} className='openpage'> Add A Listing </NavLink></li>
-                <li><LogoutButton /></li>
+                <li className='logout'><LogoutButton /></li>
               </ul>
             {/* <ProfileButton /> */}
             </nav>

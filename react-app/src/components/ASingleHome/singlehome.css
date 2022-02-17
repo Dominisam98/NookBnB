@@ -18,7 +18,7 @@
     margin: 0px;
     box-sizing: border-box;
     border-radius: 10px;
-    background-color: brown;
+  
 
 
 }
@@ -68,13 +68,13 @@
     height: auto;
 }
 
-.single-spot-name{
+.single-home-name{
     font-size: 35px;
     align-self: flex-start;
     margin-left: 7vw;
 }
 
-.spot-location{
+.home-location{
     display: flex;
     list-style-type: none;
     padding-left:0px;
@@ -86,7 +86,7 @@
     display: flex;
 }
 
-.spot-edit-delete{
+.home-edit-delete{
     display: flex;
     width: 85vw;
     justify-content: space-between;
@@ -94,8 +94,8 @@
     margin-bottom: 20px;
 }
 
-.single-spot-button{
-    color: rgb(126, 126, 126);
+.single-home-button{
+    color:aquamarine;
     background-color: transparent;
     text-decoration: underline;
     border:none;
@@ -103,7 +103,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.single-spot-button:hover{
+.single-home-button:hover{
     cursor: pointer;
 }
 
@@ -126,18 +126,18 @@
     box-sizing: border-box;
     padding: 15px;
     margin-top: 15px;
-    box-shadow: 0 5px 15px -2px rgb(201, 201, 201);
+    box-shadow: 0 5px 15px -2px white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.317);
+    background-color: white;
 
 }
 
 .posted-by{
     font-size: 18px;
     border-bottom: 1px solid rgb(154, 154, 154);
-    color: #FF385C;
+    color: aquamarine;
 }
 
 .review-contents{
@@ -152,22 +152,21 @@
 }
 
 .fa-star{
-    color: #FF385C;
+    color: aquamarine;
     justify-content: left;
 }
 
 .review-box{
     margin: 0px;
     width: 38vw;
-    border: none;
+    border:2px;
     box-shadow: 0 5px 15px -2px rgb(201, 201, 201);
     height: 40px;
     padding-left: 20px;
 }
 
 .submit-review-button{
-    background-color:#FF385C;
-    border: none;
+    background-color:brown;
     color: white;
     height: 40px;
     border-radius: 10px;
@@ -186,12 +185,12 @@
     margin-top: 40px;
 }
 
-.host-spot-small{
+.host-home-small{
     font-size: 20px;
     color: rgb(140, 140, 140)
 }
 
-.spot-price{
+.home-price{
     font-size: 20px;
     color: rgb(140, 140, 140)
 }
