@@ -56,7 +56,7 @@ const CreateHomeForm = () => {
       validationErrors.push("Please input a valid image URL.")
     }
     if (!/\.(jpe?g|png|gif|bmp)$/gi.test(image1) || !/\.(jpe?g|png|gif|bmp)$/gi.test(image2) || !/\.(jpe?g|png|gif|bmp)$/gi.test(image3)) {
-      validationErrors.push("Must be a valid image url format (.jpeg, .png, .gif, .bmp");
+      validationErrors.push("Must be a valid image url  (.jpeg, .png, .gif, .bmp");
     }
 
 
