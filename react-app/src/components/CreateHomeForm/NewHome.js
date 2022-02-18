@@ -107,9 +107,9 @@ const CreateHomeForm = () => {
 
   return (
     <section className="section-container">
-      <div className='login-form'>
+      <div className="form-container">
         <form className="main-form-container" onSubmit={handleSubmit}>
-          <h1 className="label">List a Home</h1>
+          <h3 className="new-home-header">Add a Home</h3>
           <div className="error-list-container">
             <ul className="error-list">
             {errors.map((error, ind) => (
@@ -117,9 +117,9 @@ const CreateHomeForm = () => {
             ))}
             </ul>
           </div>
-          <div className='login-input'>
+          <div className="input-field-new">
             <input
-              className='login-input'
+              className="new-home-input"
               name="name"
               type="input"
               placeholder="Home Name"
@@ -129,7 +129,7 @@ const CreateHomeForm = () => {
           </div>
           <div className="input-field-new">
             <input
-              className='login-input'
+              className="new-home-input"
               name="address"
               type="input"
               placeholder="Address"
@@ -139,7 +139,7 @@ const CreateHomeForm = () => {
           </div>
           <div className="input-field-new">
             <input
-              className='login-input'
+              className="new-home-input"
               name="city"
               type="input"
               placeholder="City"
@@ -149,7 +149,7 @@ const CreateHomeForm = () => {
           </div>
           <div className="input-field-new">
             <input
-              className='login-input'
+              className="new-home-input"
               name="state"
               type="input"
               placeholder="State"
@@ -160,7 +160,7 @@ const CreateHomeForm = () => {
 
           <div className="input-field-new">
             <input
-              className='login-input'
+              className="new-home-input"
               name="country"
               type="input"
               placeholder="Country"
@@ -169,8 +169,8 @@ const CreateHomeForm = () => {
             ></input>
           </div>
           <div>
-            <label className="label">
-              Price per night:
+            <label>
+              Please select price per night:
               <input
                 className="price-per-night"
                 name="price"
@@ -184,14 +184,14 @@ const CreateHomeForm = () => {
               ></input>
             </label>
           </div>
-          <h2 className="label">Please add three images:</h2>
+          <h2 className="new-post-photo-header">Please add three images:</h2>
           <div className="new-post-photo-container">
             <div className="content1-container">
               {content}
               <input
                 type="url"
                 placeholder="Main image URL"
-                className='login-input'
+                className="new-home-input"
                 onChange={(e) => {
                   setImage1(e.target.value);
                 }}
@@ -202,7 +202,7 @@ const CreateHomeForm = () => {
               {content2}
               <input
                 type="url"
-                className='login-input'
+                className="new-home-input"
                 placeholder="Additional Image"
                 onChange={(e) => {
                   setImage2(e.target.value);
@@ -214,7 +214,7 @@ const CreateHomeForm = () => {
               {content3}
               <input
                 type="url"
-                className='login-input'
+                className="new-home-input"
                 placeholder="Additional Image"
                 onChange={(e) => {
                   setImage3(e.target.value);

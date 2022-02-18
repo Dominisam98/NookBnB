@@ -12,6 +12,8 @@ function MainPage({ isLoaded }) {
     let sessionLinks;
     if (sessionUser) {
         sessionLinks = (
+            <>
+            <h1 className='welcome'>Welcome To NookBnB</h1>
             <div class="waviy">
                 <span>N</span>
                 <span>O</span>
@@ -23,6 +25,7 @@ function MainPage({ isLoaded }) {
                 <span>!</span>
 
              </div>
+             </>
         );
     } else {
         sessionLinks = (
