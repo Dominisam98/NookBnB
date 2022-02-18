@@ -182,7 +182,7 @@ function SingleHome() {
               {user?.id == home?.userId && (
                 <div className="edit-delete-button-review">
                   <button
-                    className="single-home-button"
+                    className="review-button"
                     onClick={() => {
                       setEditedReview(home.review)
                       setEditReviewId(home.id)
@@ -192,7 +192,7 @@ function SingleHome() {
                     Edit
                   </button>
                   <button
-                    className="single-home-button"
+                    className="review-button"
                     onClick={() => deleteReview(home.id)}
                   >
                     <i className="far fa-trash-alt"></i>Delete

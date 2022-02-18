@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import * as homeStore from "../../store/home";
 import './viewhomes.css'
+import { Link } from "react-router-dom";
+import { thunk_getAllHomes } from "../../store/home";
 
 function ViewHomes() {
   const history = useHistory();
