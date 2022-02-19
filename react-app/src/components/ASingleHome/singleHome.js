@@ -17,7 +17,7 @@ function SingleHome() {
   const [editReviewId, setEditReviewId] = useState('')
   const [editSelected, setEditSelected] = useState([false, null])
   const userId = user?.id;
-
+  const [errors, setErrors] = useState([]);
 
   if(!homes){
     history.push('/homes')
@@ -52,9 +52,6 @@ function SingleHome() {
     );
   }
 
-
-
-
   const deleteHome = async (id) => {
     await dispatch(homeStore.thunk_deleteHome({ id }));
     await dispatch(homeStore.thunk_getAllHomes());
@@ -62,11 +59,12 @@ function SingleHome() {
   };
 
   const postReview = async (homeId) => {
-    if (review.length < 300) {
+    if (review.length > 0 & review.length < 300) {
+      setErrors([]);
       await dispatch(homeStore.thunk_postReview({ review, userId, homeId }));
       await dispatch(homeStore.thunk_getAllHomes());
-    }
-    setReview("");
+      setReview("");
+    }else{return  setErrors(['Please provide a review'])}
   };
 
   let reviewEdit =
@@ -167,6 +165,11 @@ function SingleHome() {
                 Submit
               </button>
             </li>
+            <ul className='label'>
+                        {errors.map((error, idx) => (
+                            <li key={idx}>{error}</li>
+                        ))}
+                    </ul>
           </ul>
           }
         </div>
