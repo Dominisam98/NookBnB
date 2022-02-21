@@ -44,6 +44,8 @@ const SignUpForm = () => {
   }
 
   return (
+    <>
+    <h1 className='heading'>Don't Have An Account? Sign Up Here!</h1>
     <form onSubmit={onSignUp} className='login-form'>
       <div>
         {errors.map((error, ind) => (
@@ -87,8 +89,9 @@ const SignUpForm = () => {
           required={true}
         ></input>
       </div>
-      <button type='submit'>Sign Up</button>
+      <button className='fill' type='submit'>Sign Up</button>
     </form>
+    </>
   );
 };
 

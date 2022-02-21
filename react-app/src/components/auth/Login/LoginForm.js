@@ -33,6 +33,7 @@ const LoginForm = () => {
 
   return (
   <>
+  <h2 className='heading'>Welcome Back! Sign In Here.</h2>
     <form onSubmit={onLogin}>
       <div className='login-form'>
         <div>
@@ -61,7 +62,7 @@ const LoginForm = () => {
           />
         </div>
         <div>
-            <button type='submit' >Login</button>
+            <button className='fill' type='submit' >Login</button>
         </div>
         <div>
         <DemoButton/>

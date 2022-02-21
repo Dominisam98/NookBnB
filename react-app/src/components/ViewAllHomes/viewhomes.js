@@ -34,7 +34,6 @@ function ViewHomes() {
               className="button-guy"
               onClick={() => setHomeState(homeReducer?.allHomes)}
             >
-              All Homes
             </button>
           </div>
         </div>

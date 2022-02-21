@@ -13,7 +13,7 @@ function MainPage({ isLoaded }) {
     if (sessionUser) {
         sessionLinks = (
             <>
-            <h1 className='welcome'>Welcome To NookBnB</h1>
+            <h1 className='welcome'> NookBnB</h1>
             <div class="waviy">
                 <span>N</span>
                 <span>O</span>
@@ -29,15 +29,15 @@ function MainPage({ isLoaded }) {
         );
     } else {
         sessionLinks = (
-            <>
-                    <Weather />
-
-            </>
+    <>
+        <h1 className='test'>Welcome To NookBnB</h1>
+        <Weather/>
+    </>
         );
     }
 
     return (
-        <div id='main'>
+        <div className='bg-container'>
             {isLoaded && sessionLinks}
 
 

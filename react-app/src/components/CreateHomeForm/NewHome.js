@@ -6,7 +6,7 @@ import * as homeStore from "../../store/home"
 import * as postActions from "../../store/home";
 import isURL from "validator/lib/isURL";
 import isCurrency from "validator/lib/isCurrency";
-
+import './newhome.css'
 
 const CreateHomeForm = () => {
   const [errors, setErrors] = useState([]);
@@ -108,8 +108,8 @@ const CreateHomeForm = () => {
   return (
     <section className="section-container">
       <div className="form-container">
+      <h1 className="new-home-header">LIST YOUR HOME</h1>
         <form className="main-form-container" onSubmit={handleSubmit}>
-          <h3 className="new-home-header">Add a Home</h3>
           <div className="error-list-container">
             <ul className="error-list">
             {errors.map((error, ind) => (
@@ -184,13 +184,13 @@ const CreateHomeForm = () => {
               ></input>
             </label>
           </div>
-          <h2 className="new-post-photo-header">Please add three images:</h2>
+          <h2 className="new-post-photo-header">Please add images of your home:</h2>
           <div className="new-post-photo-container">
             <div className="content1-container">
               {content}
               <input
                 type="url"
-                placeholder="Main image URL"
+                placeholder="Main image"
                 className="new-home-input"
                 onChange={(e) => {
                   setImage1(e.target.value);
@@ -223,7 +223,7 @@ const CreateHomeForm = () => {
               />
             </div>
           </div>
-          <button className="post-home-form-button" type="submit">
+          <button className="fill" type="submit">
             Submit Listing
           </button>
         </form>

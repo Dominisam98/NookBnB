@@ -4,7 +4,8 @@ import { NavLink, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LogoutButton from './auth/LogoutButton';
 import './Navbar.css'
-import ProfileButton from './profilebutton';
+import ProfileButton from './ProfileButton';
+
 
 const NavBar = ({ isLoaded }) => {
   const user = useSelector(state => state.session.user)
@@ -19,8 +20,9 @@ const NavBar = ({ isLoaded }) => {
                 <li><NavLink to='/homes' exact={true} className='openpage'> Find A Home </NavLink></li>
                 <li><NavLink to='/homes/new' exact={true} className='openpage'> Add A Listing </NavLink></li>
                 <li className='logout'><LogoutButton /></li>
+                {/* <li><ProfileButton user={user} /></li> */}
               </ul>
-            {/* <ProfileButton /> */}
+
             </nav>
           </>
 

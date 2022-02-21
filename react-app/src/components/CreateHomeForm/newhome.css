@@ -1,0 +1,86 @@
+
+
+.main-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.newspot-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    align-items: center;
+    width: 100%;
+    margin-right: 0px;
+}
+
+.newspot-form{
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4%;
+}
+
+.post-image-preview{
+    height: 25vh;
+    width: 25vw;
+    object-fit: cover;
+}
+
+.new-post-photo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 35vh;
+    width: 80vw;
+    margin-bottom: 20px;
+}
+
+.content1-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.errors{
+    color: white;
+}
+.new-post-photo-header{
+    margin-top: 15px;
+}
+
+.new-spot-input{
+    margin: 0px;
+    width: 20vw;
+    border: none;
+    box-shadow: 0 5px 15px -2px rgb(201, 201, 201);
+    height: 40px;
+    padding-left: 20px;
+}
+
+
+
+
+.input-field-new{
+    margin-top:5px;
+}
+
+.price-per-night{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.new-spot-input{
+    display: flex;
+    justify-content: end;
+}
+
+.new-home-header{
+    display: flex;
+    justify-content: center;
+}

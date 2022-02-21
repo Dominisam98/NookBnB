@@ -69,7 +69,7 @@ const EditHomeForm = () => {
                 ></input>
               </div>
             </div>
-            <button className="edit-form-button" type="submit">Submit</button>
+            <button className="fill" type="submit">Submit</button>
           </form>
         </div>
       </section>
