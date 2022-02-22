@@ -154,7 +154,7 @@ function SingleHome() {
                 className="review-box"
                 value={review}
                 onChange={(e) => setReview(e.target.value)}
-                placeholder="Leave a review"
+                placeholder="Write a review"
               ></input>
             </li>
             <li>
