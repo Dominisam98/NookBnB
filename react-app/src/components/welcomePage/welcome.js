@@ -25,6 +25,32 @@ function MainPage({ isLoaded }) {
                 <span>!</span>
 
              </div>
+                <footer className='homeFooter'>
+                    <div className='homeAboutContainer'>
+                        <a
+                            className='homeAboutLink'
+                            href='https://www.linkedin.com/in/dominique-samuels-b33233197/'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <img
+                                src={'https://i.ibb.co/ZmrdqsC/linkedin.png'}
+                                className='homeAboutImg'
+                            />
+                        </a>
+                        <a
+                            className='homeAboutLink'
+                            href='https://github.com/dominisam98'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <img
+                                src={'https://i.ibb.co/b2ZmRL8/github.png'}
+                                className='homeAboutImg'
+                            />
+                        </a>
+                    </div>
+                </footer>
              </>
         );
     } else {
