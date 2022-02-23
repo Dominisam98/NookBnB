@@ -44,12 +44,12 @@ const CreateHomeForm = () => {
     if(!state || state.length > 20){
       validationErrors.push("---Please enter valid state.---");
     }
-    if (!country || country.length > 20) {
-      validationErrors.push("---Country must be between 1 and 20 characters.---");
+    if (!country || country.length > 15) {
+      validationErrors.push("---Country must be between 1 and 15 characters.---");
     }
     if (!price || !isCurrency(price) || price > 1000) {
       validationErrors.push(
-        "---Please enter a valid price between $1 and $2,000---"
+        "---Please enter a valid price between $1 and $1,000---"
       );
     }
     if(!isURL(image1) || !isURL(image2) || !isURL(image3)){
@@ -178,7 +178,6 @@ const CreateHomeForm = () => {
                 placeholder="Price"
                 min="0"
                 max="1000"
-                step="50"
                 value={price}
                 onChange={(e) => setPrice(e.target.value)}
               ></input>
