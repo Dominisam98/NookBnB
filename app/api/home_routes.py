@@ -71,11 +71,12 @@ def one_home(id):
     return oneHome
 
 #Edit home
-@home_routes.route("/<int:id>/edit", methods=["POST"])
+@home_routes.route("/<int:id>/edit", methods=["PUT"])
 def updateHome(id):
     homeToUpdate = Home.query.get(id)
     homeToUpdate.price = request.json["price"]
     homeToUpdate.name = request.json["name"]
+    homeToUpdate.address = request.json["address"]
 
     db.session.commit()
     updatedHome = Home.query.get(id)

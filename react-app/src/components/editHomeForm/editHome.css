@@ -1,0 +1,6 @@
+.sub{
+    display: flex;
+    justify-content: center;
+    color:blue;
+    background-color: aquamarine;
+}
