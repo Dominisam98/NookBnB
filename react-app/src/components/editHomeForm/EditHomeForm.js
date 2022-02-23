@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { useParams } from "react-router";
-
-
 import * as homeActions from "../../store/home";
 
 const EditHomeForm = () => {
@@ -15,7 +13,7 @@ const EditHomeForm = () => {
   let currentHomes = useSelector((state) => state?.homeReducer.allHomes)
   let currentHome;
   if (currentHomes) {
-    currentHome = currentHomes.filter((home) => home["id"] === id)[0];
+    currentHome = currentHomes.filter((home) => home["id"] == id)[0];
   }
   const [price, setPrice] = useState(currentHome?.price);
   const [name, setName] = useState(currentHome?.name);
@@ -61,8 +59,7 @@ const EditHomeForm = () => {
                   className="edit-Home-input"
                   name="price"
                   type="number"
-                  placeholder="Price"
-                  min="1"
+                  placeholder="price"
                   max="10000"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}

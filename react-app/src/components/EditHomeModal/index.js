@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Modal } from "../../context/Modal";
-import EditHomeForm from "../EditHomeForm/edithomeform";
+import EditHomeForm from "../editHomeForm/EditHomeForm";
 
 
 function SignUpFormModal() {
   const [showModal, setShowModal] = useState(false);
+
 
   return (
     <>

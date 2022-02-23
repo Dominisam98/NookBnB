@@ -13,8 +13,8 @@ import './App.css'
 import CreateHomeForm from './components/CreateHomeForm/NewHome';
 import MainPage from './components/welcomePage/welcome';
 import ViewHomes from './components/ViewAllHomes/viewhomes';
-import EditHomeForm from './components/EditHomeForm/edithomeform';
 import SingleHome from './components/ASingleHome/singleHome';
+import EditHomeForm from './components/editHomeForm/EditHomeForm';
 
 
 
@@ -44,7 +44,6 @@ function App() {
   return (
     <BrowserRouter>
       <NavBar isLoaded={isLoaded} />
-      {isLoaded && (
         <Switch>
           <Route path='/' exact={true}>
             <MainPage isLoaded={isLoaded} />
@@ -65,11 +64,11 @@ function App() {
           <ProtectedRoute path="/homes/" exact={true}>
           <ViewHomes />
         </ProtectedRoute>
-        <Route path="/homes/:id/edit" exact={true}>
-          <EditHomeForm />
-        </Route>
         <Route path="/homes/:id" exact={true}>
           <SingleHome />
+        </Route>
+        <Route path="/homes/:id/edit" exact={true}>
+          <EditHomeForm />
         </Route>
           <ProtectedRoute path='/users' exact={true} >
             <UsersList />
@@ -80,7 +79,6 @@ function App() {
           <ProtectedRoute path='/' exact={true} >
           </ProtectedRoute>
         </Switch>
-      )}
     </BrowserRouter>
   );
 }
