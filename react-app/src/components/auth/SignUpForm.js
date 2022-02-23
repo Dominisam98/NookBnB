@@ -21,7 +21,9 @@ const SignUpForm = () => {
     } else if (password.length < 4){
       setErrors(['password must be longer than 4 characters'])
     }
-    else if (password === repeatPassword) {
+      else if (email.length < 2){
+      setErrors(['Enter a valid email!'])
+    } else if (password === repeatPassword) {
       const data = await dispatch(signUp(username, email, password));
       if (data) {
         setErrors(data)

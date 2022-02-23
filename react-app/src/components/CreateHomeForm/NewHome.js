@@ -33,30 +33,30 @@ const CreateHomeForm = () => {
     setUrl({"1":image1, "2":image2, "3":image3})
     const validationErrors = []
     if(!name || name.length > 40){
-      validationErrors.push("Home name must be between 1 and 40 characters.")
+      validationErrors.push("---Home name must be between 1 and 40 characters.---")
     }
     if (!address || address.length > 40) {
-      validationErrors.push("Address must be between 1 and 40 characters.");
+      validationErrors.push("---Address must be between 1 and 40 characters.---");
     }
     if(!city || city.length > 20) {
-      validationErrors.push("City must be between 1 and 20 characters.");
+      validationErrors.push("---City must be between 1 and 20 characters.---");
     }
     if(!state || state.length > 20){
-      validationErrors.push("Please enter valid state.");
+      validationErrors.push("---Please enter valid state.---");
     }
     if (!country || country.length > 20) {
-      validationErrors.push("Country must be between 1 and 20 characters.");
+      validationErrors.push("---Country must be between 1 and 20 characters.---");
     }
     if (!price || !isCurrency(price) || price > 1000) {
       validationErrors.push(
-        "Please enter a valid price between $1 and $2,000"
+        "---Please enter a valid price between $1 and $2,000---"
       );
     }
     if(!isURL(image1) || !isURL(image2) || !isURL(image3)){
-      validationErrors.push("Please input a valid image URL.")
+      validationErrors.push("---Please input a valid image URL.---")
     }
     if (!/\.(jpe?g|png|gif|bmp)$/gi.test(image1) || !/\.(jpe?g|png|gif|bmp)$/gi.test(image2) || !/\.(jpe?g|png|gif|bmp)$/gi.test(image3)) {
-      validationErrors.push("Must be a valid image url  (.jpeg, .png, .gif, .bmp");
+      validationErrors.push("---Must be a valid image url  (.jpeg, .png, .gif, .bmp---");
     }
 
 
