@@ -107,6 +107,7 @@ const CreateHomeForm = () => {
 
   return (
     <section className="section-container">
+      
       <div className="form-container">
       <h1 className="new-home-header">LIST YOUR HOME</h1>
         <form className="main-form-container" onSubmit={handleSubmit}>

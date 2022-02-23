@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color:  #151719;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +13,6 @@
   }
 
   .waviy {
-    background-color:  #151719;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -169,6 +167,11 @@
     background-position: center;
     height: 100%;
   }
+  .bg{
+    background-color: #81f1f7;
+    height: 800px;
+  }
+
 
  .test {
     display:flex;
@@ -198,3 +201,180 @@
     height: 64px;
     width: auto;
 }
+
+.about{
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.six h1 {
+  text-align: center;
+  color:#222; font-size:30px; font-weight:400;
+  text-transform: uppercase;
+  word-spacing: 1px; letter-spacing:2px; color:#c50000;
+}
+.six h1 span {
+  line-height:2em; padding-bottom:15px;
+  text-transform: none;
+  font-size:.7em;
+  font-weight: normal;
+  font-style: italic; font-family: "Playfair Display","Bookman",serif;
+  color:#999; letter-spacing:-0.005em; word-spacing:1px;
+  letter-spacing:none;
+}
+.six h1:after, .six h1:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 45px;
+  height: 4px;
+  content: "";
+  right: 45px;
+  margin:auto;
+  background-color: #ccc;
+}
+.six h1:before {
+background-color:#d78b8b;
+  left:45px; width:90px;
+}
+
+.six{
+  display: flex;
+  justify-content: center;
+}
+
+.seven h1 {
+  text-align: center;
+      font-size:30px; font-weight:300; color:White; letter-spacing:1px;
+      text-transform: uppercase;
+
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      grid-template-rows: 27px 0;
+      grid-gap: 20px;
+      align-items: center;
+  }
+
+  .seven h1:after,.seven h1:before {
+      content: " ";
+      display: block;
+      border-bottom: 1px solid #c50000;
+      border-top: 1px solid #c50000;
+      height: 5px;
+    background-color:#f8f8f8;
+  }
+
+  .paragraph{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  .deconstructed {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    color: transparent;
+    font-family: 'Cambay', sans-serif;
+    font-size: 5vw;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.03em;
+  }
+
+  .deconstructed > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: Brown;
+    pointer-events: none;
+  }
+
+  .deconstructed > div:nth-child(1) {
+    -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+    mask-image: linear-gradient(black 25%, transparent 25%);
+    animation: deconstructed1 5s infinite;
+  }
+
+  .deconstructed > div:nth-child(2) {
+    -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    animation: deconstructed2 5s infinite;
+  }
+
+  .deconstructed > div:nth-child(3) {
+     -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    animation: deconstructed3 5s infinite;
+  }
+
+  .deconstructed > div:nth-child(4) {
+     -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+    mask-image: linear-gradient(transparent 75%, black 75%);
+    animation: deconstructed4 5s infinite;
+  }
+
+  @keyframes deconstructed1 {
+    0% {
+      transform: translateX(100%);
+    }
+    26% {
+      transform: translateX(0%);
+    }
+    83% {
+      transform: translateX(-0.1%);
+    }
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+
+  @keyframes deconstructed2 {
+    0% {
+      transform: translateX(100%);
+    }
+    24% {
+      transform: translateX(0.5%);
+    }
+    82% {
+      transform: translateX(-0.2%);
+    }
+    100% {
+      transform: translateX(-125%);
+    }
+  }
+
+  @keyframes deconstructed3 {
+    0% {
+      transform: translateX(100%);
+    }
+    22% {
+      transform: translateX(0%);
+    }
+    81% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-130%);
+    }
+  }
+
+  @keyframes deconstructed4 {
+    0% {
+      transform: translateX(100%);
+    }
+    20% {
+      transform: translateX(0%);
+    }
+    80% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-135%);
+    }
+  }

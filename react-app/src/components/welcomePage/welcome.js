@@ -12,8 +12,18 @@ function MainPage({ isLoaded }) {
     let sessionLinks;
     if (sessionUser) {
         sessionLinks = (
-            <>
-            <h1 className='welcome'> NookBnB</h1>
+        <div className='bg'>
+             <div class="six">
+                <h1>NookBnB
+                <span>An AirBnB Clone</span>
+                </h1>
+                </div>
+                <div class="seven">
+                    <h1>About Site</h1>
+                </div>
+            <div className='paragraph'><p>NookBnB is an inspired clone of AirBnB, the lodging site with a twist of animal crossing styling.
+                This is still being worked on.<br/>My contacts are just one scroll away.</p></div>
+
             <div class="waviy">
                 <span>N</span>
                 <span>O</span>
@@ -25,6 +35,13 @@ function MainPage({ isLoaded }) {
                 <span>!</span>
 
              </div>
+             <div class="deconstructed">
+                    WELCOME
+                    <div>WELCOME</div>
+                    <div>WELCOME</div>
+                    <div>WELCOME</div>
+                    <div>WELCOME</div>
+                </div>
                 <footer className='homeFooter'>
                     <div className='homeAboutContainer'>
                         <a
@@ -51,7 +68,7 @@ function MainPage({ isLoaded }) {
                         </a>
                     </div>
                 </footer>
-             </>
+        </div>
         );
     } else {
         sessionLinks = (
