@@ -20,3 +20,10 @@ Here is a Live link to my application [NookBnB](https://nook-bnb.herokuapp.com/)
 
 # Goals
 I plan on implementing a booking functionality as well as a search bar in order to search by state. I also plan on fixing up the CSS for site to look fun but aswell very professional.
+
+HomePage
+![image](https://user-images.githubusercontent.com/86487670/155606836-b58ab7eb-af30-4c03-8f65-577e2bf903e7.png)
+
+All Homes Page
+![image](https://user-images.githubusercontent.com/86487670/155607006-d9ba8472-74d8-4687-80a0-8c65a3ff6304.png)
+
