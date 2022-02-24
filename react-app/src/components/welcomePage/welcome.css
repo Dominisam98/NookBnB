@@ -236,11 +236,7 @@
   content: "";
   right: 45px;
   margin:auto;
-  background-color: #ccc;
-}
-.six h1:before {
-background-color:#d78b8b;
-  left:45px; width:90px;
+ 
 }
 
 .six{
