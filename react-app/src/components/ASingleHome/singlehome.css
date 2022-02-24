@@ -148,6 +148,8 @@
     flex-direction: column;
     justify-content: space-between;
     background-color: white;
+    overflow-wrap: break-word;
+
 
 }
 
@@ -159,6 +161,12 @@
 
 .review-contents{
     margin-top: 5px;
+    display: inline-block;
+    position: relative;
+    width: 370px;
+    height: 110px;
+    margin: 3px;
+
 }
 
 .review-count{
