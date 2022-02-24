@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
 import Weather from '../weather/weather';
 import './welcome.css'
+import { NavLink, Link } from 'react-router-dom';
 
 
 function MainPage({ isLoaded }) {
@@ -20,9 +21,15 @@ function MainPage({ isLoaded }) {
                 </div>
                 <div class="seven">
                     <h1>About Site</h1>
+
                 </div>
-            <div className='paragraph'><p>NookBnB is an inspired clone of AirBnB, the lodging site with a twist of animal crossing styling.
-                This is still being worked on.<br/>My contacts are just one scroll away.</p></div>
+                <div className='fix'><div className='paragraph'><p className='paragraph'>NookBnB is an inspired clone of AirBnB, the lodging site with a twist of animal crossing styling.
+                This is still being worked on.<br/>My contacts are just one scroll away.I plan on adding a booking feature in the near feature. I also would like to broaden<br/>the
+                the horizon of what you can list on the website, such as boats, cars and more! This was a very fun site to work on and I'm anxious to do even more with this site.
+                </p>
+                </div></div>
+                <div className='linkz'><p className='padd'>Need Some Help To Plan Your Destination? Click Help Below!</p></div>
+                <div className='fix'><Link to="/help" className='area'>Help</Link></div>
 
             <div class="waviy">
                 <span>N</span>
@@ -67,6 +74,7 @@ function MainPage({ isLoaded }) {
                             />
                         </a>
                     </div>
+
                 </footer>
         </div>
         );

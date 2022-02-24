@@ -15,6 +15,7 @@ import MainPage from './components/welcomePage/welcome';
 import ViewHomes from './components/ViewAllHomes/viewhomes';
 import SingleHome from './components/ASingleHome/singleHome';
 import EditHomeForm from './components/editHomeForm/EditHomeForm';
+import Help from './components/welcomePage/about';
 
 
 
@@ -54,6 +55,9 @@ function App() {
           </Route>
           <ProtectedRoute path='/welcome' exact={true}>
               <MainPage />
+          </ProtectedRoute>
+          <ProtectedRoute path='/help' exact={true}>
+              <Help />
           </ProtectedRoute>
           <Route path='/sign-up' exact={true}>
             <SignUpForm />

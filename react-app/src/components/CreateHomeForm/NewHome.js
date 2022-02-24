@@ -33,10 +33,10 @@ const CreateHomeForm = () => {
     setUrl({"1":image1, "2":image2, "3":image3})
     const validationErrors = []
     if(!name || name.length > 40){
-      validationErrors.push("---Home name must be between 1 and 40 characters.---")
+      validationErrors.push("---Home name can not be 0 or over 40 characters.---")
     }
     if (!address || address.length > 40) {
-      validationErrors.push("---Address must be between 1 and 40 characters.---");
+      validationErrors.push("---Address can not be 0 or over 40 characters.---");
     }
     if(!city || city.length > 20) {
       validationErrors.push("---City must be between 1 and 20 characters.---");
@@ -107,7 +107,6 @@ const CreateHomeForm = () => {
 
   return (
     <section className="section-container">
-      
       <div className="form-container">
       <h1 className="new-home-header">LIST YOUR HOME</h1>
         <form className="main-form-container" onSubmit={handleSubmit}>
@@ -227,6 +226,7 @@ const CreateHomeForm = () => {
             Submit Listing
           </button>
         </form>
+        <p>Sample Imgs for pregrading (https://i.ibb.co/FVZdGBW/Lynn.jpg)(https://i.ibb.co/7459Y48/download-4.jpg)</p>
       </div>
     </section>
   );
