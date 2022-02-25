@@ -23,15 +23,20 @@ function MainPage({ isLoaded }) {
                     <h1>About Site</h1>
 
                 </div>
+                <div className='linkz'><p className='padd'>Ready to get started as a host? Click Below!</p></div>
+                <div className='fix'><Link to="/homes/new" className='buttin'>LIST MY HOME</Link></div>
+                <div className='fix'><Link to="/homes" className='buttin'>View all homes</Link></div>
+
+
                 <div className='fix'><div className='paragraph'><p className='paragraph'>NookBnB is an inspired clone of AirBnB, the lodging site with a twist of animal crossing styling.
                 This is still being worked on.<br/>My contacts are just one scroll away.I plan on adding a booking feature in the near feature. I also would like to broaden<br/>the
                 the horizon of what you can list on the website, such as boats, cars and more! This was a very fun site to work on and I'm anxious to do even more with this site.
                 </p>
                 </div></div>
-                <div className='linkz'><p className='padd'>Need Some Help To Plan Your Destination? Click Help Below!</p></div>
-                <div className='fix'><Link to="/help" className='area'>Help</Link></div>
 
-            <div class="waviy">
+
+
+            {/* <div class="waviy">
                 <span>N</span>
                 <span>O</span>
                 <span>O</span>
@@ -41,7 +46,7 @@ function MainPage({ isLoaded }) {
                 <span>B</span>
                 <span>!</span>
 
-             </div>
+             </div> */}
              <div class="deconstructed">
                     WELCOME
                     <div>WELCOME</div>
@@ -83,6 +88,34 @@ function MainPage({ isLoaded }) {
     <>
         <h1 className='test'>Welcome To NookBnB</h1>
         <Weather/>
+
+        <footer className='homeFooter'>
+                    <div className='homeAboutContainer'>
+                        <a
+                            className='homeAboutLink'
+                            href='https://www.linkedin.com/in/dominique-samuels-b33233197/'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <img
+                                src={'https://i.ibb.co/ZmrdqsC/linkedin.png'}
+                                className='homeAboutImg'
+                            />
+                        </a>
+                        <a
+                            className='homeAboutLink'
+                            href='https://github.com/dominisam98'
+                            target='_blank'
+                            rel='noreferrer'
+                        >
+                            <img
+                                src={'https://i.ibb.co/b2ZmRL8/github.png'}
+                                className='homeAboutImg'
+                            />
+                        </a>
+                    </div>
+
+                </footer>
     </>
         );
     }

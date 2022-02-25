@@ -1,14 +1,14 @@
 .app {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: black;
   }
 
-  div.app__container {
+  /* div.app__container {
     padding: 30px;
     box-shadow: 0 0 5px black;
     background: white;
-  }
+  } */

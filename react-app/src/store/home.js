@@ -92,7 +92,7 @@ export const thunk_addHome =
 
 //UPDATE HOMES
 export const thunk_updateHome =
-    ({ id, userId, price, name, address }) =>
+    ({ id, userId, price, name, address, imageOneId, imageOneUrl, imageTwoId, imageTwoUrl,imageThreeId, imageThreeUrl}) =>
         async (dispatch) => {
 
             const res = await fetch(`/api/homes/${id}/edit`, {
@@ -105,6 +105,12 @@ export const thunk_updateHome =
                     price,
                     name,
                     address,
+                    imageOneId,
+                    imageOneUrl,
+                    imageTwoId,
+                    imageTwoUrl,
+                    imageThreeId,
+                    imageThreeUrl,
                 }),
             });
 

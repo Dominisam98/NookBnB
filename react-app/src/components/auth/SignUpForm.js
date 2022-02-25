@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { Redirect } from 'react-router-dom';
 import { login, signUp } from '../../store/session';
+import isEmail from "validator/lib/isEmail";
 import './login.css'
 
 const SignUpForm = () => {
@@ -20,6 +21,9 @@ const SignUpForm = () => {
       setErrors(['Username must be longer than 5 characters'])
     } else if (password.length < 4){
       setErrors(['password must be longer than 4 characters'])
+    }  else if (!isEmail(email)) {
+      setErrors(["Please enter a valid Email address."])
+
     }
       else if (email.length < 2){
       setErrors(['Enter a valid email!'])

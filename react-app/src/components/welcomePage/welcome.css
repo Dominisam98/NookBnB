@@ -236,7 +236,7 @@
   content: "";
   right: 45px;
   margin:auto;
- 
+
 }
 
 .six{
@@ -439,4 +439,24 @@
         0px -10px 100px #7B96B8,
         0px -10px 100px #7B96B8;
     }
+  }
+
+  .buttin {
+    background-color: red;
+    color: white;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .buttin:hover {
+    background-color: red;
+  }
+
+  .buttin:active {
+    background-color: red;
+  }
+
+  .buttin:visited {
+    background-color: red;
   }

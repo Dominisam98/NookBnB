@@ -78,6 +78,15 @@ def updateHome(id):
     homeToUpdate.name = request.json["name"]
     homeToUpdate.address = request.json["address"]
 
+    imageOneUpdate = Image.query.get(request.json["imageOneId"])
+    imageOneUpdate.url = request.json["imageOneUrl"]
+
+    imageTwoUpdate = Image.query.get(request.json["imageTwoId"])
+    imageTwoUpdate.url = request.json["imageTwoUrl"]
+
+    imageThreeUpdate = Image.query.get(request.json["imageThreeId"])
+    imageThreeUpdate.url = request.json["imageThreeUrl"]
+
     db.session.commit()
     updatedHome = Home.query.get(id)
     return jsonify(updatedHome.to_dict())

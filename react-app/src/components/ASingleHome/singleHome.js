@@ -90,10 +90,11 @@ function SingleHome() {
   const editReview = async (id) => {
     let reviewId = editReviewId
     let review = editedReview
+    setErrors([]);
     if(editedReview){
     await dispatch(homeStore.thunk_editReview({reviewId, review}))
     await dispatch(homeStore.thunk_getAllHomes());
-    }
+    } else {return setErrors(['Please provide a review, can not submit empty edit'])}
     setEditSelected([false,null])
   }
 

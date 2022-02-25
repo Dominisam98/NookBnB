@@ -17,9 +17,9 @@ const CreateHomeForm = () => {
   const [address, setAddress] = useState("");
   const [name, setName] = useState("");
   const [url, setUrl] = useState();
-  const [image1, setImage1] = useState("")
-  const [image2, setImage2] = useState("");
-  const [image3, setImage3] = useState("");
+  const [image1, setImage1] = useState("https://i.ibb.co/cc9sVc6/download-1.jpg")
+  const [image2, setImage2] = useState("https://i.ibb.co/cc9sVc6/download-1.jpg");
+  const [image3, setImage3] = useState("https://i.ibb.co/cc9sVc6/download-1.jpg");
   const user = useSelector((state) => state.session.user);
   const dispatch = useDispatch();
   const history = useHistory();
@@ -30,6 +30,17 @@ const CreateHomeForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const userId = user.id;
+    if(image1.length === 0)
+    {setImage1('https://i.ibb.co/cc9sVc6/download-1.jpg')}
+
+    if(image2.length === 0)
+    {setImage2('https://i.ibb.co/cc9sVc6/download-1.jpg')}
+
+    if(image3.length === 0)
+    {setImage3('https://i.ibb.co/cc9sVc6/download-1.jpg')}
+
+
+
     setUrl({"1":image1, "2":image2, "3":image3})
     const validationErrors = []
     if(!name || name.length > 40){
@@ -47,7 +58,7 @@ const CreateHomeForm = () => {
     if (!country || country.length > 15) {
       validationErrors.push("---Country must be between 1 and 15 characters.---");
     }
-    if (!price || !isCurrency(price) || price > 1000) {
+    if (!price || !isCurrency(price) || price > 1000 || price < 0) {
       validationErrors.push(
         "---Please enter a valid price between $1 and $1,000---"
       );
@@ -194,7 +205,7 @@ const CreateHomeForm = () => {
                 onChange={(e) => {
                   setImage1(e.target.value);
                 }}
-                required
+                // required
               />
             </div>
             <div className="content1-container">
@@ -206,7 +217,7 @@ const CreateHomeForm = () => {
                 onChange={(e) => {
                   setImage2(e.target.value);
                 }}
-                required
+                // required
               />
             </div>
             <div className="content1-container">
@@ -218,7 +229,7 @@ const CreateHomeForm = () => {
                 onChange={(e) => {
                   setImage3(e.target.value);
                 }}
-                required
+                // required
               />
             </div>
           </div>
