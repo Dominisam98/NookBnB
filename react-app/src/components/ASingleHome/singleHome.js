@@ -166,9 +166,9 @@ function SingleHome() {
                 Submit
               </button>
             </li>
-            <ul className='label'>
+            <ul className='error-list'>
                         {errors.map((error, idx) => (
-                            <li key={idx}>{error}</li>
+                            <li className='errors' key={idx}>{error}</li>
                         ))}
                     </ul>
           </ul>

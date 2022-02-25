@@ -35,11 +35,11 @@ const NavBar = ({ isLoaded }) => {
 
           <>
             <nav>
-              <ul>
-                <li><NavLink to='/' exact={true} activeClassName='active' className='openpage'> Home </NavLink></li>
-                <li><NavLink to='/homes' exact={true} className='openpage' onClick={() => setHomeState(homeReducer?.allHomes)}> Find A Home </NavLink></li>
-                <li><NavLink to='/homes/new' exact={true} className='openpage'> Add A Listing </NavLink></li>
-                <li className='logout'><LogoutButton /></li>
+              <ul className='navin'>
+                <li className='novin'><NavLink to='/' exact={true} activeClassName='active' className='openpage'> Home </NavLink></li>
+                <li className='novin'><NavLink to='/homes' exact={true} className='openpage' onClick={() => setHomeState(homeReducer?.allHomes)}> Find A Home </NavLink></li>
+                <li className='novin'><NavLink to='/homes/new' exact={true} className='openpage'> Add A Listing </NavLink></li>
+                <li className='logout novin'><LogoutButton /></li>
                 {/* <li><ProfileButton user={user} /></li> */}
               </ul>
 
@@ -51,10 +51,10 @@ const NavBar = ({ isLoaded }) => {
     sessionLinks = (
       <>
           <nav>
-            <ul>
-             <li><NavLink to='/' exact={true} className='openpage'>Home</NavLink></li>
-              <li><NavLink to='/login' className='openpage' exact={true}>Login</NavLink></li>
-              <li><NavLink to='/sign-up' className='openpage' exact={true}>Sign Up</NavLink></li>
+            <ul className='navin'>
+             <li className='novin'><NavLink to='/' exact={true} className='openpage'>Home</NavLink></li>
+              <li className='novin'><NavLink to='/login' className='openpage' exact={true}>Login</NavLink></li>
+              <li className='novin'><NavLink to='/sign-up' className='openpage' exact={true}>Sign Up</NavLink></li>
             </ul>
 
           </nav>
@@ -64,7 +64,7 @@ const NavBar = ({ isLoaded }) => {
 return(
   <>
 
-  <ul>
+  <ul className='navin'>
 
       {isLoaded && sessionLinks}
 

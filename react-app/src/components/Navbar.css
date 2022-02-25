@@ -1,4 +1,4 @@
-ul{
+.navin{
     padding:0;
     background:black;
     font-family:Arial, sans serif;
@@ -9,7 +9,7 @@ ul{
     margin-bottom: auto;
 }
 
-li{
+.novin{
     display:inline-block;
 }
 
