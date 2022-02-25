@@ -8,6 +8,11 @@
     height:600px
 }
 
+.error-list{
+   display: flex;
+   background-color: aquamarine;
+   flex-direction: column;
+}
 .newspot-container{
     display: flex;
     flex-direction: column;
@@ -49,7 +54,7 @@
 
 }
 .errors{
-    color: white;
+    color: black;
 }
 .new-post-photo-header{
     margin-top: 15px;
