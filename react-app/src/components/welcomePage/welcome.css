@@ -174,7 +174,7 @@
   .bg{
     background-color: white;
     height: 500px;
-    background-image: url("https://i.ibb.co/SfDH7H2/nordwood-themes-R53t-Tg6-J4c-unsplash.jpg");
+    background-image: url("https://i.ibb.co/pdmQpgw/yves-alarie-v-CYfd-Vh-IZ2-Y-unsplash.jpg");
     background-size:cover;
     background-repeat:no-repeat;
     min-width: 100%;
@@ -221,7 +221,7 @@
 
 .six h1 {
   text-align: center;
-  color:#222; font-size:30px; font-weight:400;
+  color:white; font-size:30px; font-weight:400;
   text-transform: uppercase;
   word-spacing: 1px; letter-spacing:2px; color:aquamarine;
 }
@@ -253,7 +253,7 @@
 
 .seven h1 {
   text-align: center;
-      font-size:30px; font-weight:300; color:Black; letter-spacing:1px;
+      font-size:30px; font-weight:300; color:white; letter-spacing:1px;
       text-transform: uppercase;
       display: grid;
       padding-top: 50px;
@@ -406,6 +406,7 @@
 
   .padd{
     padding-top: 20px;
+    color: white;
   }
 
   .linkz{
