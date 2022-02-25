@@ -1,9 +1,9 @@
 
 .waviy{
-  height:800px;
+  height:500px;
     padding-top: 0;
     margin: 0;
-    top:60px;
+    bottom:60px;
 
     display: flex;
     justify-content: center;
@@ -172,8 +172,15 @@
     height: 100%;
   }
   .bg{
-    background-color: #81f1f7;
-    height: 1580px;
+    background-color: white;
+    height: 500px;
+    background-image: url("https://i.ibb.co/SfDH7H2/nordwood-themes-R53t-Tg6-J4c-unsplash.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    min-width: 100%;
+    max-width: 100%;
+    background-position: center;
+    height: 100%;
   }
 
 
@@ -216,7 +223,7 @@
   text-align: center;
   color:#222; font-size:30px; font-weight:400;
   text-transform: uppercase;
-  word-spacing: 1px; letter-spacing:2px; color:#c50000;
+  word-spacing: 1px; letter-spacing:2px; color:aquamarine;
 }
 .six h1 span {
   line-height:2em; padding-bottom:15px;
@@ -246,7 +253,7 @@
 
 .seven h1 {
   text-align: center;
-      font-size:30px; font-weight:300; color:White; letter-spacing:1px;
+      font-size:30px; font-weight:300; color:Black; letter-spacing:1px;
       text-transform: uppercase;
       display: grid;
       padding-top: 50px;
@@ -262,7 +269,7 @@
       border-bottom: 1px solid #c50000;
       border-top: 1px solid #c50000;
       height: 5px;
-    background-color:#f8f8f8;
+    background-color:aquamarine;
   }
 
   .paragraph{
@@ -442,21 +449,25 @@
   }
 
   .buttin {
-    background-color: red;
+    background-color: brown;
     color: white;
+
     padding: 1em 1.5em;
+    width: 100px;
+
     text-decoration: none;
+    border-radius: 50%;
     text-transform: uppercase;
   }
 
   .buttin:hover {
-    background-color: red;
+    background-color: brown;
   }
 
   .buttin:active {
-    background-color: red;
+    background-color: brown;
   }
 
   .buttin:visited {
-    background-color: red;
+    background-color: brown;
   }

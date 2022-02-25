@@ -2,8 +2,11 @@ ul{
     padding:0;
     background:black;
     font-family:Arial, sans serif;
-    font-size:12px;
+    font-size:20px;
     text-transform:uppercase;
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: auto;
 }
 
 li{

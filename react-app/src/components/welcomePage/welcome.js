@@ -14,16 +14,15 @@ function MainPage({ isLoaded }) {
     if (sessionUser) {
         sessionLinks = (
         <div className='bg'>
-             <div class="six">
-                <h1>NookBnB
-                <span>An AirBnB Clone</span>
+
+                <h1 className='test'>NookBnB
                 </h1>
-                </div>
+
                 <div class="seven">
-                    <h1>About Site</h1>
+                    <h1>Get Started</h1>
 
                 </div>
-                <div className='linkz'><p className='padd'>Ready to get started as a host? Click Below!</p></div>
+                <div className='six'><h2 className='padd'>Ready to get started as a host? Click Below!</h2></div>
                 <div className='fix'><Link to="/homes/new" className='buttin'>LIST MY HOME</Link></div>
                 <div className='fix'><Link to="/homes" className='buttin'>View all homes</Link></div>
 
@@ -36,7 +35,7 @@ function MainPage({ isLoaded }) {
 
 
 
-            {/* <div class="waviy">
+            <div class="waviy">
                 <span>N</span>
                 <span>O</span>
                 <span>O</span>
@@ -46,7 +45,7 @@ function MainPage({ isLoaded }) {
                 <span>B</span>
                 <span>!</span>
 
-             </div> */}
+             </div>
              <div class="deconstructed">
                     WELCOME
                     <div>WELCOME</div>
