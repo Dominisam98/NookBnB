@@ -27,7 +27,12 @@ const SignUpForm = () => {
     }
       else if (email.length < 2){
       setErrors(['Enter a valid email!'])
-    } else if (password === repeatPassword) {
+
+    }else if (password !== repeatPassword) {
+      setErrors(["Passwords don't match!"]);
+    }
+
+    else if (password === repeatPassword) {
       const data = await dispatch(signUp(username, email, password));
       if (data) {
         setErrors(data)
